@@ -2,7 +2,8 @@ import json
 
 arquivo = 'estoque.json'
 
-dados = []
+with open(arquivo, "r", encoding="utf-8") as f:
+    dados = json.load(f)
 
 while True:
     print(20*"=", "MENU DE GERENCIAMENTO INVENTÁRIO",20*"=")
@@ -33,22 +34,29 @@ while True:
 
                 dados.append(item)
                 
-                with open("estoque.json","r", encoding="utf-8") as adicionar:
-                    dados = json.dumps(dados, adicionar, indent=4)
+                with open("estoque.json","w", encoding="utf-8") as adicionar:
+                    json.dump(dados, adicionar, indent=4, ensure_ascii=False)
 
                 print("Produto salvo com sucesso!")
                 
         case 2:
                 idproduto = int(input("Informe o id do produto para remove-lo: "))
-                with open("estoque.json", "r") as f:
-                    elementos = json.load(f)
-                idproduto = "idproduto"
-                if idproduto in elementos:
-                    del elementos[idproduto]
-                    print("Item com chave removido.")
-                else:
-                    print("Chave não encontrada.")
-                with open("estoque.json", "w") as f:
-                    json.dump(dados, f, indent=4)
+                encontrado = False
+
+                for item in dados:
+                    if item['idproduto'] == idproduto:
+                        dados.remove(item)
+                        encontrado = True
+                        print("Produto removido com sucesso!")
+                        break
+
+                if not encontrado:
+                    print("Produto não encontrado.")
+
+                with open("estoque.json", "w", encoding="utf-8") as f:
+                    json.dump(dados, f, indent=4, ensure_ascii=False)
 
                 print("Alterações salvas no arquivo.")
+        
+        case 3:
+                print("Função de atualizar ainda não implementada.")

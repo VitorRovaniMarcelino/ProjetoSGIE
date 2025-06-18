@@ -1,7 +1,9 @@
 [
     {
         "idproduto": 2,
-        "nome": "a",
-        "quantidade": 1
+        "nome": "2",
+        "quantidade": 2,
+        "categoria": "2",
+        "dataEntrada": "2"
     }
 ]
