@@ -25,5 +25,3 @@ def atualizarProduto():
         print("Alterações salvas no arquivo.")
     else:
         print("Produto não encontrado.")
-
-                
