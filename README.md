@@ -1,7 +1,6 @@
 # 📦 Sistema de Gerenciamento de Inventário em Equipe
 
 Um projetinho feito em **Python** que usa **JSON** para salvar os dados do inventário.  
-A ideia é simples: controlar itens de forma colaborativa, sem complicação.
 
 ## ✨ O que dá pra fazer
 - ➕ Adicionar itens ao inventário  
