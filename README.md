@@ -9,6 +9,6 @@ Um projetinho feito em **Python** que usa **JSON** para salvar os dados do inven
 - ❌ Remover itens  
 - 💾 Tudo fica salvo em um arquivo JSON (não perde nada quando fecha o programa)  
 
-## 🛠️ O que usei
+## 🛠️ Ferramentas Utilizadas
 - **Python 3**  
 - **JSON** (pra guardar os dados bonitinho)  
